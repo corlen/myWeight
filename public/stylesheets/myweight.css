@@ -1,0 +1,21 @@
+body
+{
+background-color:#d0e4fe;
+}
+
+div.insert_weight
+{
+width:800px;
+height:50px;
+padding:5px;
+border:1px solid;
+margin:0px;
+}
+div.graph_weight
+{
+width:800px;
+height:450px;
+padding:5px;
+border:1px solid;
+margin:0px;
+}
