@@ -1,0 +1,26 @@
+
+== Using Gruff with Rails
+
+Here are a few samples of how you could use Gruff in a Rails project.
+
+== Setup
+
+In either case, your environment.rb should have
+
+  require "gruff"
+
+You might also want to make a folder with your special fonts called
+
+  artwork/fonts
+
+Some people also have success with copying all the Gruff files to Rails' ./lib folder (for shared hosts that don't have the Gruff gem installed.)
+
+== Usage in Code
+
+I use the gruff_method.rb style, possibly with caching to store the output of the graph on disk.
+
+Carlos Villela sent gruff_controller.rb and gruff_helper.rb, and sets a session variable with the relevant data. This allows you to do a Sparklines-style call to Gruff from a view.
+
+== Others
+
+Send other implementations or suggestions to boss@topfunky.com

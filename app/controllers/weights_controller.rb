@@ -44,7 +44,7 @@ class WeightsController < ApplicationController
 
     respond_to do |format|
       if @weight.save
-        format.html { redirect_to(@weight, :notice => 'Weight was successfully created.') }
+        format.html { redirect_to(root_path, :notice => 'Weight was successfully created.') }
         format.xml  { render :xml => @weight, :status => :created, :location => @weight }
       else
         format.html { render :action => "new" }

@@ -1,0 +1,12 @@
+<table>
+  <tr>
+    <th>Weight</th>
+    <th>Date</th>
+  </tr>
+<% @weights.each do |weight| %>
+  <tr>
+    <td><%= weight.weight %></td>
+    <td><%= weight.date %></td>
+  </tr>
+<% end %>
+</table>
