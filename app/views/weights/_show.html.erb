@@ -6,7 +6,7 @@
 <% @weights.each do |weight| %>
   <tr>
     <td><%= weight.weight %></td>
-    <td><%= weight.date %></td>
+    <td><%= weight.date.strftime("%d/%m/%Y - %H:%M") %></td>
   </tr>
 <% end %>
 </table>

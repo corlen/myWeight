@@ -10,6 +10,7 @@ height:50px;
 padding:5px;
 border:1px solid;
 margin:0px;
+background-color: red;
 }
 div.graph_weight
 {
@@ -19,3 +20,4 @@ padding:5px;
 border:1px solid;
 margin:0px;
 }
+

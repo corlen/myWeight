@@ -17,7 +17,8 @@ a:visited { color: #666; }
 a:hover { color: #fff; background-color:#000; }
 
 div.field, div.actions {
-  margin-bottom: 10px;
+ margin-bottom: 0px;
+ background-color: blue;
 }
 
 #notice {
@@ -26,17 +27,21 @@ div.field, div.actions {
 
 .field_with_errors {
   padding: 2px;
-  background-color: red;
+  background-color: black;
   display: table;
+  float:left;
 }
 
 #error_explanation {
-  width: 450px;
-  border: 2px solid red;
+  width: 400px;
+  border: 2px;
+  border-style:solid;
+  border-color:red;
   padding: 7px;
   padding-bottom: 0;
   margin-bottom: 20px;
   background-color: #f0f0f0;
+
 }
 
 #error_explanation h2 {

@@ -40,15 +40,14 @@ class WeightsController < ApplicationController
   # POST /weights
   # POST /weights.xml
   def create
-    @weight = Weight.new(params[:weight])
+	@weights = Weight.all    
+	@weight = Weight.new(params[:weight])
 
     respond_to do |format|
       if @weight.save
         format.html { redirect_to(root_path, :notice => 'Weight was successfully created.') }
-        format.xml  { render :xml => @weight, :status => :created, :location => @weight }
       else
-        format.html { render :action => "new" }
-        format.xml  { render :xml => @weight.errors, :status => :unprocessable_entity }
+        format.html { render :action => "home/index" }
       end
     end
   end
