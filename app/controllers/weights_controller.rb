@@ -32,7 +32,7 @@ class WeightsController < ApplicationController
     
 	@weights = Weight.all    
 	@weight = Weight.new(params[:weight])
-  @weight.date = DateTime.now.strftime("%d/%m/%Y - %H:%M")
+  @weight.date = DateTime.now
 
   
     respond_to do |format|
