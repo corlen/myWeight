@@ -32,9 +32,8 @@ class WeightsController < ApplicationController
     
 	@weights = Weight.all    
 	@weight = Weight.new(params[:weight])
-  @weight.date = DateTime.now.strftime("%d/%m/%Y - %H:%M")
-
-  
+	@weight.date = Time.now
+ 
     respond_to do |format|
       if @weight.save
         format.html { redirect_to(root_path, :notice => 'Weight was successfully created.') }
