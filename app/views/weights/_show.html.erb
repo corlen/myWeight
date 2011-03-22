@@ -6,7 +6,7 @@
 <% @weights.each do |weight| %>
   <tr>
     <td><%= weight.weight %></td>
-    <td><%= weight.date %></td>
+    <td><%= l weight.date, :format => :short  %></td>
   </tr>
 <% end %>
 </table>

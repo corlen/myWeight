@@ -19,8 +19,8 @@ en:
   
   time:
     formats:
-      default: "%A, %d de %B de %Y, %H:%M h"
-      short: "%d/%m, %H:%M h"
-      long: "%A, %d de %B de %Y, %H:%M h"
+      default: "%A, %d de %B de %Y, %H:%M"
+      short: "%d/%m/%Y - %H:%M"
+      long: "%A, %d de %B de %Y, %H:%M"
     am: ''
     pm: ''
