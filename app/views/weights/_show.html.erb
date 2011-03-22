@@ -5,7 +5,7 @@
   </tr>
 <% @weights.each do |weight| %>
   <tr>
-    <td><%= weight.weight %></td>
+    <td><%= number_with_precision(weight.weight) %></td>
     <td><%= l weight.date, :format => :short  %></td>
   </tr>
 <% end %>
