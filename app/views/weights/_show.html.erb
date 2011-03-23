@@ -1,12 +1,12 @@
 <table>
   <tr>
-    <th>Weight</th>
-    <th>Date</th>
+    <th align="left">Weight</th>
+    <th align="left">Date</th>
   </tr>
 <% @weights.each do |weight| %>
   <tr>
-    <td><%= number_with_precision(weight.weight) %></td>
-    <td><%= l weight.date, :format => :short  %></td>
+    <td width="100" align="left"><%= number_with_precision(weight.weight) %></td>
+    <td width="200" align="left"><%= l weight.date, :format => :short  %></td>
   </tr>
 <% end %>
 </table>
