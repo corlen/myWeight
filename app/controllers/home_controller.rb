@@ -1,7 +1,7 @@
 class HomeController < ApplicationController
   def index
     @weight = Weight.new
-    @weights = Weight.find(:all, :order => 'date')
+    @weights = Weight.order('date DESC').all
   end
 
 end
