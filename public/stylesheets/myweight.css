@@ -12,6 +12,34 @@ border:1px solid;
 margin:0px;
 display:table;
 }
+div.tab1
+{
+width:50px;
+height:20px;
+padding:1px;
+border:1px solid;
+border-color:#d0e4fe;
+text-align:center;
+margin:1px;
+display:table-cell;
+background-color: #000000;
+color: #FFFFFF;
+cursor:pointer;
+}
+div.tab2
+{
+width:50px;
+height:20px;
+padding:1px;
+border:1px solid;
+border-color:#d0e4fe;
+text-align:center;
+margin:1px;
+display:table-cell;
+background-color: #000000;
+color: #FFFFFF;
+cursor:pointer;
+}
 div.graph_weight
 {
 width:318px;
@@ -19,4 +47,12 @@ padding:5px;
 border:1px solid;
 margin:0px;
 }
-
+div.show_data
+{
+width:800px;
+height:450px;
+padding:5px;
+border:1px solid;
+margin:0px;
+display:table;
+}

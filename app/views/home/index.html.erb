@@ -4,15 +4,30 @@
 <head>
 	<title>MyWeight</title>
 	<%= stylesheet_link_tag "myweight", :media => "all" %>
+	<script LANGUAGE='Javascript'>
+	function ShowMenuDiv (obj) {
+		obj.style.display = 'table';
+	}
+		
+	function HideMenuDiv (obj) {
+		obj.style.display = 'none';
+	}
+	</script>
+
 </head> 
 <body id="store">
 <p>My Weight</p>
-<div class="insert_weight">
+<div id="insert_div" class="insert_weight">
 <%= render "weights/form" %>
 </div>
 <p>
-<div class="graph_weight">
+<div class="tab1" onclick="HideMenuDiv(show_chart);ShowMenuDiv(show_data);">Chart</div>
+<div class="tab2" onclick="HideMenuDiv(show_data);ShowMenuDiv(show_chart);">Data</div>
+<div id="show_chart" class="graph_weight" style="display: none">
 <%= render "weights/show" %>
+</div>
+<div id="show_data" class="show_data">
+<%=  image_tag "example_chart.png" %>
 </div>
 </body>
 </html>
