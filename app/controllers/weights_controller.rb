@@ -1,7 +1,7 @@
 class WeightsController < ApplicationController
 
   def index
-    @weights = Weight.all
+    @weights = Weight.order('date DESC').all
 
     respond_to do |format|
       format.html # index.html.erb
