@@ -1,6 +1,20 @@
 <h1>Editing weight</h1>
 
-<%= render 'form' %>
+<%= form_for(@weight) do |f| %>
+	<% if @weight.errors.any? %>
+		<div id="error_explanation">
+			<h2><%= pluralize(@weight.errors.count, "error") %> prohibited this weight from being saved:</h2>
+			<ul>
+			<% @weight.errors.full_messages.each do |msg| %>
+				<li><%= msg %></li>
+			<% end %>
+			</ul>
+		</div>
+	<% end %>
+	<div class="field">
+		<%= f.label :weight %><%= f.text_field :weight %><%= f.label :date %><%= f.text_field :date %><%= f.submit %>
+	</div>
+<% end %>
 
 <%= link_to 'Show', @weight %> |
 <%= link_to 'Back', weights_path %>
