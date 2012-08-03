@@ -20,6 +20,17 @@ div.field, div.actions {
  margin-bottom: 0px;
 }
 
+.field div {
+	position: relative;
+	float: left;
+	margin-right: 5px;
+} 
+
+.field div div {
+	height: 23px;
+	
+} 
+
 #notice {
   color: green;
 }

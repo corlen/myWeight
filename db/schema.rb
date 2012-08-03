@@ -10,13 +10,17 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101123001004) do
+ActiveRecord::Schema.define(:version => 20120801191831) do
 
   create_table "weights", :force => true do |t|
     t.decimal  "weight"
     t.datetime "date"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.decimal  "waist"
+    t.decimal  "neck"
+    t.decimal  "height"
+    t.decimal  "perc_fat"
   end
 
 end
