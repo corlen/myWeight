@@ -39,7 +39,6 @@ ActiveRecord::Schema.define(:version => 20120806000037) do
     t.decimal   "neck"
     t.decimal   "height"
     t.decimal   "perc_fat"
-    t.integer   "user_id"
   end
 
 end
