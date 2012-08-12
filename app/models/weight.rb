@@ -1,4 +1,6 @@
 class Weight < ActiveRecord::Base
+  belongs_to :user
+  
   validates :weight,    :presence => true
   validates :waist,     :presence => true
   validates :neck,      :presence => true

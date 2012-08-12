@@ -1,4 +1,6 @@
 MyWeight::Application.routes.draw do
+  devise_for :users
+
   resources :weights
 
   get "home/index"

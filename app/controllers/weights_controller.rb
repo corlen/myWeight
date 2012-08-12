@@ -1,7 +1,7 @@
 class WeightsController < ApplicationController
-
+  before_filter :authenticate_user!
   def index
-    @weights = Weight.order('date DESC').all
+    @weights = Weight.find(:all, :conditions => ["user_id = ?", current_user.id], :order => "date DESC")
 
     respond_to do |format|
       format.html # index.html.erb
@@ -33,6 +33,7 @@ class WeightsController < ApplicationController
 	@weights = Weight.all    
 	@weight = Weight.new(params[:weight])
 	@weight.date = Time.now
+	@weight.user_id = current_user.id
  
     respond_to do |format|
       if @weight.save
