@@ -1,4 +1,6 @@
 MyWeight::Application.routes.draw do
+  get "user_profile/index"
+
   devise_for :users
 
   resources :weights

@@ -1,0 +1,17 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+						"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html> 
+<head>
+	<title>MyWeight - User Profile</title>
+	<%= stylesheet_link_tag "myweight", :media => "all" %>
+</head> 
+<body id="store">
+<h2>Profile</h2>
+<p>Go to <%= link_to "weights", home_index_path%>.</p>
+<table>
+  <tr><td>Email</td><td align="left"><div><%= @user.email %></div></td></tr>
+  <tr><td>Height</td><td align="left"><div><%= number_with_precision(@user.height) %></div></td></tr>
+  <tr><td>Fat Percent Desired</td><td align="left"><div><%= number_to_percentage(@user.perc_fat, :precision => 0) %></div></td></tr>
+</table>
+</body>
+</html>
