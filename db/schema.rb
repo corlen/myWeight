@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120806000037) do
+ActiveRecord::Schema.define(:version => 20120814174246) do
 
   create_table "users", :force => true do |t|
     t.string    "email",                                 :default => "", :null => false
@@ -25,21 +25,21 @@ ActiveRecord::Schema.define(:version => 20120806000037) do
     t.string    "last_sign_in_ip"
     t.timestamp "created_at"
     t.timestamp "updated_at"
+    t.decimal   "height"
+    t.decimal   "perc_fat"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
   add_index "users", ["reset_password_token"], :name => "index_users_on_reset_password_token", :unique => true
 
   create_table "weights", :force => true do |t|
-    t.integer   "user_id"
-    t.decimal   "weight"
-    t.timestamp "date"
-    t.timestamp "created_at"
-    t.timestamp "updated_at"
-    t.decimal   "waist"
-    t.decimal   "neck"
-    t.decimal   "height"
-    t.decimal   "perc_fat"
+    t.integer  "user_id"
+    t.decimal  "weight"
+    t.datetime "date"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.decimal  "waist"
+    t.decimal  "neck"
   end
 
 end
