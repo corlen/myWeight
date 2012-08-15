@@ -14,11 +14,17 @@
 			<div><%= f.label :weight %></div><br>
 			<div><%= f.label :waist %></div><br>
 			<div><%= f.label :neck %></div><br>
+			<% if current_user.gender == "Female" %>
+				<div><%= f.label :hip %></div><br>
+			<% end %>
 		</div>
 		<div>
 			<%= f.text_field :weight, :size => 5 %><br>
 			<%= f.text_field :waist, :size => 5 %><br>
 			<%= f.text_field :neck, :size => 5 %><br>
+			<% if current_user.gender == "Female" %>
+				<%= f.text_field :hip, :size => 5 %><br>
+			<% end %>
 		</div><br>
 		<div style="clear:both"><%= f.submit %></div>
 	</div>
