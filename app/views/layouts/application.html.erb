@@ -17,7 +17,7 @@
 		</div>
 		<div id="user_nav">
 			<% if user_signed_in? %>
-			Signed in as <%= current_user.email %>. Profile <%= link_to "here", user_profile_index_path%>. Not you?
+			Signed in as <%= current_user.email %>. Not you?
 			<%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
 			<% end %>
 		</div>

@@ -19,4 +19,10 @@ padding:5px;
 border:1px solid;
 margin:0px;
 }
-
+div.tab_profile_header{
+background-color: #4bb7fa; 
+padding: 8px
+}
+div.tab_profile_value{
+padding: 5px
+}

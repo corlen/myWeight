@@ -9,9 +9,20 @@
 <h2>Profile</h2>
 <p>Go to <%= link_to "weights", home_index_path%>.</p>
 <table>
-  <tr><td>Email</td><td align="left"><div><%= @user.email %></div></td></tr>
-  <tr><td>Height</td><td align="left"><div><%= number_with_precision(@user.height) %></div></td></tr>
-  <tr><td>Fat Percent Desired</td><td align="left"><div><%= number_to_percentage(@user.perc_fat, :precision => 0) %></div></td></tr>
+  <tr>
+  	<td><div class="tab_profile_header">Email</div></td>
+  	<td align="left">
+  		<div class="tab_profile_value"><%= @user.email %></div>
+  	</td>
+  </tr>
+  <tr>
+  	<td><div class="tab_profile_header">Height</div></td>
+  	<td align="left"><div class="tab_profile_value"><%= number_with_precision(@user.height) %></div></td>
+  </tr>
+  <tr>
+  	<td><div class="tab_profile_header">Percent Desired</div></td>
+  	<td align="left"><div class="tab_profile_value"><%= number_to_percentage(@user.perc_fat, :precision => 0) %></div></td>
+  </tr>
 </table>
 </body>
 </html>
