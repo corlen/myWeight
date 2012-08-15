@@ -23,6 +23,10 @@
   	<td><div class="tab_profile_header">Percent Desired</div></td>
   	<td align="left"><div class="tab_profile_value"><%= number_to_percentage(@user.perc_fat, :precision => 0) %></div></td>
   </tr>
+  <tr>
+  	<td><div class="tab_profile_header">Gender</div></td>
+  	<td align="left"><div class="tab_profile_value"><%= @user.gender %></div></td>
+  </tr>
 </table>
 </body>
 </html>
