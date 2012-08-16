@@ -1,9 +1,12 @@
 MyWeight::Application.routes.draw do
+  # get "users/new"
+
   get "user_profile/index"
 
   devise_for :users
 
   resources :weights
+  resources :users
 
   get "home/index"
   # The priority is based upon order of creation:
