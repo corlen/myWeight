@@ -3,6 +3,7 @@ class HomeController < ApplicationController
   def index
     @weight = Weight.new
     @weights = current_user.weights.order("date DESC")
+    @last_weight = current_user.weights.find(:last)	
   end
 
 end
