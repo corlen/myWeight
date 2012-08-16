@@ -26,6 +26,10 @@ module WeightsHelper
   
   def print_all_values(weight, height, waist, neck, perc_fat, hip)
     weight.to_s + " # " + height.to_s + " # " + waist.to_s + " # " + neck.to_s + " # " + perc_fat.to_s + " # " + hip.to_s + " # "
-  end   
+  end 
+  
+  def calculate_ideal_weight(weight, height, waist, neck, hip, perc_fat)
+     (weight - (calculate_fat_weight_percent(height, waist, neck, hip) / 100 * weight)) / (1 - (perc_fat / 100));
+  end  
   
 end
