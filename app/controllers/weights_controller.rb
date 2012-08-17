@@ -1,13 +1,5 @@
 class WeightsController < ApplicationController
   before_filter :authenticate_user!
-  def index
-    @weights = Weight.find(:all, :conditions => ["user_id = ?", current_user.id], :order => "date DESC")
-
-    respond_to do |format|
-      format.html # index.html.erb
-    end
-  end
-
   def show
     @weight = Weight.find(params[:id])
 
@@ -29,12 +21,12 @@ class WeightsController < ApplicationController
   end
 
   def create
-    
-	@weights = Weight.all    
-	@weight = Weight.new(params[:weight])
-	@weight.date = Time.now
-	@weight.user_id = current_user.id
- 
+
+    @weights = Weight.all
+    @weight = Weight.new(params[:weight])
+    @weight.date = Time.now
+    @weight.user_id = current_user.id
+
     respond_to do |format|
       if @weight.save
         format.html { redirect_to(root_path, :notice => 'Weight was successfully created.') }
@@ -49,7 +41,7 @@ class WeightsController < ApplicationController
 
     respond_to do |format|
       if @weight.update_attributes(params[:weight])
-        format.html { redirect_to(@weight, :notice => 'Weight was successfully updated.') }
+        format.html { redirect_to(root_path, :notice => 'Weight was successfully updated.') }
       else
         format.html { render :action => "edit" }
       end
@@ -61,7 +53,7 @@ class WeightsController < ApplicationController
     @weight.destroy
 
     respond_to do |format|
-      format.html { redirect_to(weights_url) }
+      format.html { redirect_to(root_path, :notice => 'Weight was deleted.') }
     end
   end
 end

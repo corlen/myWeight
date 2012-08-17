@@ -1,5 +1,13 @@
-<h1>Editing weight</h1>
-
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+						"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html> 
+<head>
+	<title>MyWeight - Edit Weight</title>
+	<%= stylesheet_link_tag "myweight", :media => "all" %>
+</head> 
+<body id="store">
+<h2>Edit Weight</h2>
+<p>Go to <%= link_to "weights", home_index_path%>.</p>
 <%= form_for(@weight) do |f| %>
 	<% if @weight.errors.any? %>
 		<div id="error_explanation">
@@ -11,10 +19,32 @@
 			</ul>
 		</div>
 	<% end %>
-	<div class="field">
-		<%= f.label :weight %><%= f.text_field :weight %><%= f.label :date %><%= f.text_field :date %><%= f.submit %>
-	</div>
+	<table>
+		<tr>
+			<td><div class="tab_profile_header"><%= f.label :weight %></div></td>
+			<td align="left"><div class="tab_profile_value"><%= f.text_field :weight, :size => 5 %>kgs</div></td>
+		</tr>
+		<tr>
+			<td><div class="tab_profile_header"><%= f.label :date %></div></td>
+			<td align="left"><div class="tab_profile_value"><%= f.text_field :date, :value => @weight.date.strftime("%d/%m/%Y %H:%M"), :size => 18%></div></td>
+		</tr>
+		<tr>
+			<td><div class="tab_profile_header"><%= f.label :waist %></div></td>
+			<td align="left"><div class="tab_profile_value"><%= f.text_field :waist, :size => 5%>cm</div></td>
+		</tr>
+		<tr>
+			<td><div class="tab_profile_header"><%= f.label :neck %></div></td>
+			<td align="left"><div class="tab_profile_value"><%= f.text_field :neck, :size => 5%>cm</div></td>
+		</tr>
+		<tr>
+			<td><div class="tab_profile_header"><%= f.label :hip %></div></td>
+			<td align="left"><div class="tab_profile_value"><%= f.text_field :hip, :size => 5%>cm</div></td>
+		</tr>
+		<tr>
+			<td align="center" colspan="2"><div class="tab_profile_value"><%= f.submit %></div></td>
+		</tr>
+	</table>
 <% end %>
 
-<%= link_to 'Show', @weight %> |
-<%= link_to 'Back', weights_path %>
+</body>
+</html>

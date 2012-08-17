@@ -4,6 +4,7 @@
     <th align="left">Fat Weight</th>
     <th align="left">Lean Weight</th>
     <th align="left">Date</th>
+    <th align="center">Actions</th>
   </tr>
 <% @weights.each do |weight| %>
   <tr>
@@ -11,6 +12,7 @@
     <td width="90" align="left"><div><%= number_with_precision(calculate_fat_weight(weight.weight, current_user.height, weight.waist, weight.neck, weight.hip)) %></div></td>
     <td width="100" align="left"><div><%= number_with_precision(calculate_lean_weight(weight.weight, current_user.height, weight.waist, weight.neck, weight.hip)) %></div></td>
     <td width="140" align="left"><div><%= l weight.date, :format => :short  %></div></td>
+    <td width="80" align="left"><div><%= link_to "Edit", edit_weight_path(weight)%> <%= link_to 'Delete', weight, :confirm => 'Are you sure?', :method => :delete %></div></td>
   </tr>
 <% end %>
 </table>
