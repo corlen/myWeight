@@ -4,4 +4,3 @@ Features futuras:
 *Aba com gráfico Pesos x Data (já fiz algumas coisas no branch Charts)
 *Internacionalizacao
 *Criacao de usuarios
-*BUG: ao atualizar o profile do usuário, ele reclama se a senha estiver vazia(Allow users to edit their account without providing a password)
