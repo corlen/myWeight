@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+						"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html> 
+<head>
+	<title>MyWeight - Show Weight</title>
+	<%= stylesheet_link_tag "myweight", :media => "all" %>
+</head> 
+<body id="store">
+<h2>Show Weight</h2>
+<p>Go to <%= link_to "weights", home_index_path%>.</p>
+	<table>
+		<tr>
+			<td><div class="tab_profile_header">Weight</div></td>
+			<td align="left"><div class="tab_profile_value"><%=@weight.weight %> kgs</div></td>
+		</tr>
+		<tr>
+			<td><div class="tab_profile_header">Date</div></td>
+			<td align="left"><div class="tab_profile_value"><%=@weight.date.strftime("%d/%m/%Y %H:%M")%></div></td>
+		</tr>
+		<tr>
+			<td><div class="tab_profile_header">Waist</div></td>
+			<td align="left"><div class="tab_profile_value"><%=@weight.waist %> cm</div></td>
+		</tr>
+		<tr>
+			<td><div class="tab_profile_header">Neck</div></td>
+			<td align="left"><div class="tab_profile_value"><%=@weight.neck%> cm</div></td>
+		</tr>
+		<tr>
+			<td><div class="tab_profile_header">Height</div></td>
+			<td align="left"><div class="tab_profile_value"><%=current_user.height%> cm</div></td>
+		</tr>
+		<%if current_user.gender == "Female"%>
+		<tr>
+			<td><div class="tab_profile_header">Hip</div></td>
+			<td align="left"><div class="tab_profile_value"><%=@weight.hip%>cm</div></td>
+		</tr>
+		<%end%>
+	</table>
+</body>
+</html>
