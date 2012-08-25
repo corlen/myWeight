@@ -38,8 +38,6 @@ class WeightsController < ApplicationController
 
   def update
     @weight = Weight.find(params[:id])
-    temp_date = @weight.date
-    @weight.date = DateTime.new(temp_date.year,temp_date.month,temp_date.day,temp_date.hour,temp_date.min,temp_date.sec)
 
     respond_to do |format|
       if @weight.update_attributes(params[:weight])
