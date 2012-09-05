@@ -26,3 +26,11 @@ padding: 8px
 div.tab_profile_value{
 padding: 5px
 }
+div.negative_label{
+	color: red;
+	font-weight: bold;
+}
+div.positive_label{
+	color: blue;
+	font-weight: bold;
+}
