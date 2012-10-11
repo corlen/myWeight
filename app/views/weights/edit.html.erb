@@ -36,10 +36,12 @@
 			<td><div class="tab_profile_header"><%= f.label :neck %></div></td>
 			<td align="left"><div class="tab_profile_value"><%= f.text_field :neck, :size => 5%>cm</div></td>
 		</tr>
-		<tr>
-			<td><div class="tab_profile_header"><%= f.label :hip %></div></td>
-			<td align="left"><div class="tab_profile_value"><%= f.text_field :hip, :size => 5%>cm</div></td>
-		</tr>
+		<%if current_user.gender == "Female"%>
+			<tr>
+				<td><div class="tab_profile_header"><%= f.label :hip %></div></td>
+				<td align="left"><div class="tab_profile_value"><%= f.text_field :hip, :size => 5%>cm</div></td>
+			</tr>
+		<%end%>
 		<tr>
 			<td align="center" colspan="2"><div class="tab_profile_value"><%= f.submit %></div></td>
 		</tr>
