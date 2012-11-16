@@ -5,3 +5,13 @@ Features futuras:
 *Internacionalizacao
 *Criacao de usuarios
 *Possibilidade de tirar medidas com adipometro(perfil do usuario)
+*Inserir campos para criar o conceito de TI (total inches)
+  *Bicep Esquerdo
+  *Bicep Direito
+  *Coxa Esquerda
+  *Coxa Direita
+  *Habilitar o Quadril para o sexo masculino
+  *TI = soma de todos os atributos
+
+BUGS:
+*edição de perfil do usuário
