@@ -5,13 +5,22 @@ background-color:#d0e4fe;
 
 div.insert_weight
 {
-width:135px;
+width:auto;
 height:50px;
 padding:5px;
 border:1px solid;
 margin:0px;
 display:table;
 }
+
+div.labels_add_weight div
+{
+	text-align:right;
+	width:100%;
+	height:25px;
+	
+}
+
 div.graph_weight
 {
 width:535px;
