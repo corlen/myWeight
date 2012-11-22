@@ -29,12 +29,26 @@
 			<td><div class="tab_profile_header">Height</div></td>
 			<td align="left"><div class="tab_profile_value"><%=current_user.height%> cm</div></td>
 		</tr>
-		<%if current_user.gender == "Female"%>
 		<tr>
 			<td><div class="tab_profile_header">Hip</div></td>
 			<td align="left"><div class="tab_profile_value"><%=@weight.hip%>cm</div></td>
 		</tr>
-		<%end%>
+		<tr>
+			<td><div class="tab_profile_header">Left Arm</div></td>
+			<td align="left"><div class="tab_profile_value"><%=@weight.left_arm%>cm</div></td>
+		</tr>
+		<tr>
+			<td><div class="tab_profile_header">Right Arm</div></td>
+			<td align="left"><div class="tab_profile_value"><%=@weight.right_arm%>cm</div></td>
+		</tr>
+		<tr>
+			<td><div class="tab_profile_header">Left Leg</div></td>
+			<td align="left"><div class="tab_profile_value"><%=@weight.left_leg%>cm</div></td>
+		</tr>
+		<tr>
+			<td><div class="tab_profile_header">Right Leg</div></td>
+			<td align="left"><div class="tab_profile_value"><%=@weight.right_leg%>cm</div></td>
+		</tr>
 	</table>
 </body>
 </html>

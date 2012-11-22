@@ -1,6 +1,6 @@
 <table>
   <tr>
     <th align="left"><div class="tab_profile_header">Ideal Weight</div></th>
-    <td align="left"><div class="tab_profile_value"><%=number_with_precision(calculate_ideal_weight(@last_weight.weight, current_user.height, @last_weight.waist, @last_weight.neck, @last_weight.hip, current_user.perc_fat)) %> Kgs</div></td>
+    <td align="left"><div class="tab_profile_value"><%=number_with_precision(calculate_ideal_weight(@last_weight.weight, current_user.height, @last_weight.waist, @last_weight.neck, @last_weight.hip, current_user.perc_fat, current_user.gender)) %> Kgs</div></td>
   </tr>
 </table>

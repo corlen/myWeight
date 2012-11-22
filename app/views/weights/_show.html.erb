@@ -3,14 +3,16 @@
     <th align="left">Weight</th>
     <th align="left"><div class="negative_label">Fat Weight</div></th>
     <th align="left"><div class="positive_label">Lean Weight</div></th>
+    <th align="left"><div>TI</div></th>
     <th align="left">Date</th>
     <th align="center">Actions</th>
   </tr>
 <% @weights.each do |weight| %>
   <tr>
     <td width="65" align="left"><div><%= number_with_precision(weight.weight) %></div></td>
-    <td width="90" align="left"><div><%= number_with_precision(calculate_fat_weight(weight.weight, current_user.height, weight.waist, weight.neck, weight.hip)) %></div></td>
-    <td width="100" align="left"><div><%= number_with_precision(calculate_lean_weight(weight.weight, current_user.height, weight.waist, weight.neck, weight.hip)) %></div></td>
+    <td width="90" align="left"><div><%= number_with_precision(calculate_fat_weight(weight.weight, current_user.height, weight.waist, weight.neck, weight.hip, current_user.gender)) %></div></td>
+    <td width="100" align="left"><div><%= number_with_precision(calculate_lean_weight(weight.weight, current_user.height, weight.waist, weight.neck, weight.hip, current_user.gender)) %></div></td>
+    <td width="65" align="left"><div><%= number_with_precision(calculate_total_inches(weight.waist, weight.hip, weight.right_arm, weight.left_arm, weight.right_leg, weight.left_leg)) %></div></td>
     <td width="150" align="left"><div><%= l weight.date, :format => :short  %></div></td>
     <td width="125" align="left"><div>
     		<%= link_to "Edit", edit_weight_path(weight)%> 
