@@ -43,3 +43,7 @@ div.positive_label{
 	color: blue;
 	font-weight: bold;
 }
+label.error {
+	color: red;
+	padding:10px;
+}
