@@ -34,9 +34,11 @@ module WeightsHelper
   
   #"4-hour body" measure
   def calculate_total_inches(waist, hip, right_arm, left_arm, right_leg, left_leg)
+    ti = 0
     if(right_arm != 0 or left_arm != 0 or right_leg != 0 or left_leg != 0)
-    (waist + hip + right_arm + left_arm + right_leg + left_arm)
+      ti = (waist + hip + right_arm + left_arm + right_leg + left_arm)
     end
+    return ti
   end   
   
 end
