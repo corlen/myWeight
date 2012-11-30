@@ -3,6 +3,7 @@
 
 en:
   hello: "Hello world"
+  left_arm: "Left Arm"
 
   # formatos de data e hora
   date:
