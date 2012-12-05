@@ -11,15 +11,15 @@
 	<% end %>
 	<div class="field">
 		<table>
-			<tr><td><div><%= f.label :weight %></div></td>		<td><div><%= f.text_field :weight, :size => 5 %></div></td></tr>	
-			<tr><td><div><%= f.label :waist %></div></td>		<td><div><%= f.text_field :waist, :size => 5 %></div></td></tr>
-			<tr><td><div><%= f.label :neck %></div></td>		<td><div><%= f.text_field :neck, :size => 5 %></div></td></tr>
-			<tr><td><div><%= f.label :hip %></div></td>			<td><div><%= f.text_field :hip, :size => 5 %></div></td></tr>
-			<tr><td><div><%= f.label :left_arm %></div></td>	<td><div><%= f.text_field :left_arm, :size => 5 %></div></td></tr>
-			<tr><td><div><%= f.label :right_arm %></div></td>	<td><div><%= f.text_field :right_arm, :size => 5 %></div></td></tr>
-			<tr><td><div><%= f.label :left_leg %></div></td>	<td><div><%= f.text_field :left_leg, :size => 5 %></div></td></tr>
-			<tr><td><div><%= f.label :right_leg %></div></td>	<td><div><%= f.text_field :right_leg, :size => 5 %></div></td></tr>
-			<tr><td colspan="2"><div style="clear:both"><%= f.submit %></div></td>
+			<tr><td><div><%= f.label :weight%></div></td>		<td><div><%= f.text_field :weight, :size => 5, :class => "input-mini" %></div></td></tr>	
+			<tr><td><div><%= f.label :waist %></div></td>		<td><div><%= f.text_field :waist, :size => 5, :class => "input-mini" %></div></td></tr>
+			<tr><td><div><%= f.label :neck %></div></td>		<td><div><%= f.text_field :neck, :size => 5, :class => "input-mini" %></div></td></tr>
+			<tr><td><div><%= f.label :hip %></div></td>			<td><div><%= f.text_field :hip, :size => 5, :class => "input-mini" %></div></td></tr>
+			<tr><td><div><%= f.label :left_arm %></div></td>	<td><div><%= f.text_field :left_arm, :size => 5, :class => "input-mini" %></div></td></tr>
+			<tr><td><div><%= f.label :right_arm %></div></td>	<td><div><%= f.text_field :right_arm, :size => 5, :class => "input-mini" %></div></td></tr>
+			<tr><td><div><%= f.label :left_leg %></div></td>	<td><div><%= f.text_field :left_leg, :size => 5, :class => "input-mini" %></div></td></tr>
+			<tr><td><div><%= f.label :right_leg %></div></td>	<td><div><%= f.text_field :right_leg, :size => 5, :class => "input-mini" %></div></td></tr>
+			<tr><td colspan="2"><div style="clear:both"><%= f.submit "Save Weight", :class => "btn btn-info" %></div></td>
 		</table>
 	</div> 
 <% end %>
