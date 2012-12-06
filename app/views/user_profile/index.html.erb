@@ -6,9 +6,6 @@
 	<%= stylesheet_link_tag "myweight", :media => "all" %>
 </head> 
 <body id="store">
-<h2>Profile</h2>
-<p>Go to <%= link_to "weights", home_index_path%>.</p>
-<p>Go to <%= link_to "edit this profile", edit_user_path(current_user)%>.</p>
 <table>
   <tr>
   	<td><div class="tab_profile_header">Email</div></td>
@@ -31,3 +28,7 @@
 </table>
 </body>
 </html>
+<script>
+		$('#profile_menu_bar').addClass('active');
+		$('#home_menu_bar').removeClass('active');
+</script>

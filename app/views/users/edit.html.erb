@@ -6,9 +6,6 @@
 	<%= stylesheet_link_tag "myweight", :media => "all" %>
 </head> 
 <body id="store">
-<h2>Profile</h2>
-<p>Go to <%= link_to "weights", home_index_path%>.</p>
-<p>Go to <%= link_to "profile", user_profile_index_path%>.</p>
 <%= form_for(@user) do |f| %>
 	<% if @user.errors.any? %>
 		<div id="error_explanation">
@@ -26,15 +23,15 @@
 			</tr>
 			<tr>
 				<td><div><%= f.label :email %></div></td>
-				<td align="left"><div class="tab_profile_value"><%= f.text_field :email, :size => 40  %></div></td>
+				<td align="left"><div class="tab_profile_value"><%= f.text_field :email, :size => 40, :class => "input-large" %></div></td>
 			</tr>
 			<tr>
 				<td><div><%= f.label :height %></div></td>
-				<td align="left"><div class="tab_profile_value"><%= f.text_field :height, :size => 5 %>cm</div></td>
+				<td align="left"><div class="tab_profile_value"><%= f.text_field :height, :size => 5, :class => "input-mini" %>cm</div></td>
 			</tr>
 			<tr>
 				<td><div><%= f.label :perc_fat %></div></td>
-				<td align="left"><div class="tab_profile_value"><%= f.text_field :perc_fat, :size => 5 %>%</div></td>
+				<td align="left"><div class="tab_profile_value"><%= f.text_field :perc_fat, :size => 5, :class => "input-mini" %>%</div></td>
 			</tr>
 			<tr>
 				<td><div><%= f.label :gender %></div></td>
@@ -80,3 +77,7 @@
 
 </body>
 </html>
+<script>
+		$('#profile_menu_bar').addClass('active');
+		$('#home_menu_bar').removeClass('active');
+</script>

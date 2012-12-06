@@ -1,4 +1,4 @@
-<table>
+<table class="table table-hover table-condensed">
   <tr>
     <th align="left">Weight</th>
     <th align="left"><div class="negative_label">Fat Weight</div></th>
@@ -15,9 +15,9 @@
     <td width="65" align="left"><div><%= number_with_precision(calculate_total_inches(weight.waist, weight.hip, weight.right_arm, weight.left_arm, weight.right_leg, weight.left_leg)) %></div></td>
     <td width="150" align="left"><div><%= l weight.date, :format => :short  %></div></td>
     <td width="125" align="left"><div>
-    		<%= link_to "Edit", edit_weight_path(weight)%> 
-    		<%= link_to "Delete", weight, :confirm => "Are you sure?", :method => :delete %>
-    		<%= link_to 'Show', weight_path(weight) %>
+    		<%= link_to "Edit", edit_weight_path(weight), :class => "btn btn-mini"%> 
+    		<%= link_to "Delete", weight, :confirm => "Are you sure?", :method => :delete , :class => "btn btn-mini"%>
+    		<%= link_to 'Show', weight_path(weight) , :class => "btn btn-mini"%>
     </div></td>
   </tr>
 <% end %>
