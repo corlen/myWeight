@@ -5,6 +5,15 @@
 		<%= stylesheet_link_tag 'bootstrap', 'bootstrap-responsive' %>
 		<%= javascript_include_tag 'jquery-1.8.3.min', 'jquery.validate', 'bootstrap','application', 'rails' %>
 		<%= csrf_meta_tag %>
+		<style type="text/css">
+			body {
+				padding-top: 60px;
+				padding-bottom: 40px;
+			}
+			.sidebar-nav {
+				padding: 9px 0;
+			}
+		</style>
 	</head>
 	<body>
 
@@ -20,13 +29,43 @@
 		<% end %>
 
 		<% end %>
+		<% if user_signed_in? %>
+		<div class="navbar navbar-inverse navbar-fixed-top">
+			<div class="navbar-inner">
+				<div class="container" style="width: auto; padding: 0 20px;">
+					<%= link_to "My Weight", home_index_path, :class => "brand", :id => "myweight_menu_bar"%>
+					<ul class="nav">
+						<li id ="home_menu_bar" class ="active"><%= link_to "Home", home_index_path%></a></li>
+						<ul class="nav pull-left">
+							<li class="dropdown" id="profile_menu_bar">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Profile<b class="caret"></b></a>
+								<ul class="dropdown-menu">
+									<li>
+										<a href="/user_profile/index">Details</a>
+									</li>
+									<li class="divider"></li>
+									<li>
+										<%= link_to "Edit Profile", edit_user_path(current_user)%></a>
+									</li>
+							</li>
+						</ul>
+					</ul>
+					</ul>
+					<ul class="nav pull-right">
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Signed in as <%= current_user.email %><b class="caret"></b></a>
 
-		<div id="user_nav">
-			<% if user_signed_in? %>
-			Signed in as <%= current_user.email %>. Not you?
-			<%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
-			<% end %>
+							<ul class="dropdown-menu">
+								<li>
+									<a href="/users/sign_out" data-method="delete" rel="nofollow"><i class="icon-off"></i><span class="icon-padding-right">Sign out</span> </a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
 		</div>
+		<% end %>
 		<%= yield %>
 
 	</body>
