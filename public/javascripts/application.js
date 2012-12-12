@@ -17,10 +17,10 @@ $(document).ready(function(){
 			'weight[waist]': "Waist is required",
 			'weight[neck]': "Neck is required",
 			'weight[hip]': "Hip is required",
-			'weight[left_arm]': "Left Arm is required",
-			'weight[right_arm]': "Right Arm is required",
-			'weight[left_leg]': "Left Leg is required",
-			'weight[right_leg]': "Right Leg is required"
+			'weight[left_arm]': "Left Arm is required. If you dont know, put zero.",
+			'weight[right_arm]': "Right Arm is required. If you dont know, put zero.",
+			'weight[left_leg]': "Left Leg is required. If you dont know, put zero.",
+			'weight[right_leg]': "Right Leg is required. If you dont know, put zero."
 			
 		}
 	});

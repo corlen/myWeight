@@ -1,14 +1,14 @@
 body
 {
-background-color:#d0e4fe;
+background-color:#C0C0C0;
 }
 
 div.insert_weight
 {
-width:155px;
-height:50px;
-padding:5px;
-border:1px solid;
+width:auto;
+height:auto;
+padding:6px;
+border:0px solid;
 margin:0px;
 display:table;
 }
